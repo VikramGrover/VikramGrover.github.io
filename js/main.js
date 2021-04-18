@@ -9,6 +9,10 @@ $(function () {
   const botButton = document.getElementById('bot-button');
   const $botButton = $('#bot-button');
 
+  if (window.scrollY < 10) {
+    $botButton.css({ display: "block" });
+  }
+
   window.addEventListener(
     'scroll',
     function () {
@@ -18,7 +22,7 @@ $(function () {
         $topButton.fadeOut();
       }
 
-      if (window.scrollY > 5) {
+      if (window.scrollY > 10) {
         $botButton.fadeOut();
       }
       else {
@@ -45,9 +49,22 @@ $(function () {
     }, 2000);
   }
 
+  function pointDownOnLoad() {
+    botButton.classList.add('point-down');
+    setTimeout(function () {
+      botButton.classList.remove('point-down');
+    }, 2000);
+  }
+
   setTimeout(function () {
     waveOnLoad();
   }, 1000);
+
+  setTimeout(function () {
+    if (window.scrollY < 10) {
+      pointDownOnLoad();
+    }
+  }, 500);
 
   hand.addEventListener('mouseover', function () {
     hand.classList.add('wave');
