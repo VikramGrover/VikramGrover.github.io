@@ -54,9 +54,6 @@ $(function () {
 
   function pointDownOnLoad() {
     botButton.classList.add('point-down');
-    setTimeout(function () {
-      botButton.classList.remove('point-down');
-    }, 2000);
   }
 
   setTimeout(function () {
