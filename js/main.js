@@ -54,6 +54,15 @@ $(function () {
 
   function pointDownOnLoad() {
     botButton.classList.add('point-down');
+    setTimeout(function () {
+      botButton.classList.remove('point-down');
+    }, 200);
+    setTimeout(function () {
+      botButton.classList.add('point-down');
+    }, 400);
+    setTimeout(function () {
+      botButton.classList.remove('point-down');
+    }, 600);
   }
 
   setTimeout(function () {
