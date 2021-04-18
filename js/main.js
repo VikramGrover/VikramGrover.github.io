@@ -6,6 +6,8 @@ $(function () {
   const introHeight = document.querySelector('.intro').offsetHeight;
   const topButton = document.getElementById('top-button');
   const $topButton = $('#top-button');
+  const botButton = document.getElementById('bot-button');
+  const $botButton = $('#bot-button');
 
   window.addEventListener(
     'scroll',
@@ -15,12 +17,23 @@ $(function () {
       } else {
         $topButton.fadeOut();
       }
+
+      if (window.scrollY > 5) {
+        $botButton.fadeOut();
+      }
+      else {
+        $botButton.fadeIn();
+      }
     },
     false
   );
 
   topButton.addEventListener('click', function () {
     $('html, body').animate({ scrollTop: 0 }, 500);
+  });
+
+  botButton.addEventListener('click', function () {
+    $('html, body').animate({ scrollTop: introHeight }, 500);
   });
 
   const hand = document.querySelector('.emoji.wave-hand');
