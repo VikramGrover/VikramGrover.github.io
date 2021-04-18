@@ -10,10 +10,11 @@ $(function () {
   const $botButton = $('#bot-button');
 
   if (window.scrollY < 10) {
-    $botButton.fadeIn();
+    console.log('YOOOOOO');
+    botButton.classList.add('show');
   }
   else if (window.scrollY > introHeight) {
-    $topButton.fadeIn();
+    topButton.classList.add('point-down');
   }
 
   window.addEventListener(
