@@ -11,10 +11,10 @@ $(function () {
 
   if (window.pageYOffset < 10) {
     console.log('YOOOOOO');
-    botButton.classList.add('show');
+    $botButton.css({ display: 'inline-block' });
   }
   else if (window.pageYOffset > introHeight) {
-    topButton.classList.add('show');
+    $topButton.css({ display: 'inline-block' });
   }
 
   window.addEventListener(
