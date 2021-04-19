@@ -10,11 +10,10 @@ $(function () {
   const $botButton = $('#bot-button');
 
   if (window.pageYOffset < 10) {
-    console.log('YOOOOOO');
-    botButton.classList.add('show');
+    $botButton.fadeIn(0);
   }
   else if (window.pageYOffset > introHeight) {
-    topButton.classList.add('show');
+    $topButton.fadeIn(0);
   }
 
   window.addEventListener(
