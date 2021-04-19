@@ -6,8 +6,17 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>https://bchiang7.github.io/</loc>
-  <lastmod>2017-10-12T00:07:11+00:00</lastmod>
+  <loc>https://vikgrover.me/</loc>
+  <lastmod>2021-04-19T00:47:14+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://vikgrover.me/vikram_grover_resume.pdf</loc>
+  <lastmod>2021-04-19T00:47:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
