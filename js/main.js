@@ -11,10 +11,10 @@ $(function () {
 
   if (window.pageYOffset < 10) {
     console.log('YOOOOOO');
-    $botButton.css({ display: 'inline-block !important' });
+    botButton.classList.add('show');
   }
   else if (window.pageYOffset > introHeight) {
-    $topButton.css({ display: 'inline-block !important' });
+    topButton.classList.add('show');
   }
 
   window.addEventListener(
@@ -71,10 +71,10 @@ $(function () {
   }, 1000);
 
   setTimeout(function () {
-    if (window.scrollY < 10) {
+    if (window.pageYOffset < 10) {
       pointDownOnLoad();
     }
-  }, 500);
+  }, 1200);
 
   hand.addEventListener('mouseover', function () {
     hand.classList.add('wave');
