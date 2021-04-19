@@ -9,11 +9,11 @@ $(function () {
   const botButton = document.getElementById('bot-button');
   const $botButton = $('#bot-button');
 
-  if (window.scrollY < 10) {
+  if (window.pageYOffset < 10) {
     console.log('YOOOOOO');
     botButton.classList.add('show');
   }
-  else if (window.scrollY > introHeight) {
+  else if (window.pageYOffset > introHeight) {
     topButton.classList.add('point-down');
   }
 
