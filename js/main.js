@@ -14,7 +14,7 @@ $(function () {
     botButton.classList.add('show');
   }
   else if (window.pageYOffset > introHeight) {
-    topButton.classList.add('point-down');
+    topButton.classList.add('show');
   }
 
   window.addEventListener(
