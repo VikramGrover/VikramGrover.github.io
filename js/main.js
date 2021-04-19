@@ -74,7 +74,7 @@ $(function () {
     if (window.pageYOffset < 10) {
       pointDownOnLoad();
     }
-  }, 1200);
+  }, 2500);
 
   hand.addEventListener('mouseover', function () {
     hand.classList.add('wave');
