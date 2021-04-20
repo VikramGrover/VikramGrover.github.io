@@ -6,15 +6,6 @@ $(function () {
   const introHeight = document.querySelector('.intro').offsetHeight;
   const topButton = document.getElementById('top-button');
   const $topButton = $('#top-button');
-  const botButton = document.getElementById('bot-button');
-  const $botButton = $('#bot-button');
-
-  if (window.pageYOffset < 10) {
-    $botButton.fadeIn(0);
-  }
-  else if (window.pageYOffset > introHeight) {
-    $topButton.fadeIn(0);
-  }
 
   window.addEventListener(
     'scroll',
@@ -24,23 +15,12 @@ $(function () {
       } else {
         $topButton.fadeOut();
       }
-
-      if (window.scrollY > 10) {
-        $botButton.fadeOut();
-      }
-      else {
-        $botButton.fadeIn();
-      }
     },
     false
   );
 
   topButton.addEventListener('click', function () {
     $('html, body').animate({ scrollTop: 0 }, 500);
-  });
-
-  botButton.addEventListener('click', function () {
-    $('html, body').animate({ scrollTop: introHeight }, 500);
   });
 
   const hand = document.querySelector('.emoji.wave-hand');
@@ -52,28 +32,9 @@ $(function () {
     }, 2000);
   }
 
-  function pointDownOnLoad() {
-    botButton.classList.add('point-down');
-    setTimeout(function () {
-      botButton.classList.remove('point-down');
-    }, 200);
-    setTimeout(function () {
-      botButton.classList.add('point-down');
-    }, 400);
-    setTimeout(function () {
-      botButton.classList.remove('point-down');
-    }, 600);
-  }
-
   setTimeout(function () {
     waveOnLoad();
   }, 1000);
-
-  setTimeout(function () {
-    if (window.pageYOffset < 10) {
-      pointDownOnLoad();
-    }
-  }, 4500);
 
   hand.addEventListener('mouseover', function () {
     hand.classList.add('wave');
